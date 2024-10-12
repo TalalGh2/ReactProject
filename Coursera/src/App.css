@@ -1,0 +1,285 @@
+body {
+  margin: 0; 
+  padding: 0; 
+}
+
+.Welcome {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.Welcome p {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.brief {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  color: white;
+  width: 50%;
+  height: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.brief p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.start {
+  width: 150px;
+  height: 60px;
+  margin-top: 40px;
+  border: none;
+  font-size: large;
+  background-color: rgb(66, 78, 142);
+  color: white;
+  border-radius: 3px;
+  cursor: pointer; 
+  transition: 0.2s;
+}
+
+.start:hover { 
+  background-color: rgb(115, 127, 198);
+}
+
+.start:active { 
+  background-color: rgb(140, 150, 212);
+  transform: scale(0.9);
+}
+
+.headerElemnts {
+  display: flex;
+  justify-content: center;
+}
+
+.Header {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(22, 56, 115);
+  position: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  z-index: 3;
+}
+
+.Header ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+}
+
+.Header li {
+  margin-right: 650px; 
+}
+
+.Header li:last-child {
+  margin-right: 0; 
+}
+
+.Header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Home {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-image: url('/src/images/background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  overflow: hidden; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.Home::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  background: rgba(18, 16, 16, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 0; 
+}
+
+.Home h1 {
+  position: relative;
+  z-index: 2;
+  color: black; 
+}
+
+.Card {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(249, 249, 255);
+  margin: 40px;
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  box-shadow: rgb(0, 0, 0) 1px 1px 10px 3px, inset rgb(93, 92, 92) 0px 0px 5px 0px; 
+  border-radius: 10px;
+}
+
+.container {
+  width: 80%;
+  height: 500px;
+  margin-top: 50px;
+  z-index: 5;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; 
+  flex-direction: row-reverse; 
+}
+
+.AddToCartBtn {
+  border: none;
+  color: white;
+  background-color: rgb(38, 157, 46);
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Added {
+  border: none;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  border-radius: 5px;
+  height: 30px;
+}
+
+.AddToCartBtn:hover {
+  background-color: rgb(26, 112, 32);
+}
+
+.AddToCartBtn:active {
+  transform: scale(0.94);
+}
+
+
+.Cart {
+  width: 80%; 
+  max-width: 1200px;
+  margin: 50px auto; 
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  z-index: 6;
+}
+
+.empty-cart {
+  text-align: center; 
+  color: #555; 
+}
+
+.cart-title {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+.cart-item {
+  display: flex; 
+  align-items: center;
+  border-bottom: 1px solid #ddd; 
+  padding: 15px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-img {
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; 
+  margin-right: 20px; 
+}
+
+.cart-item-details {
+  flex-grow: 1; 
+}
+
+.cart-item h3 {
+  margin: 0; 
+}
+
+.remove-btn {
+  border: none; 
+  background-color: #dc3545; 
+  color: white; 
+  padding: 8px 12px; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.checkout {
+  text-align: right; 
+  margin-top: 20px; 
+}
+
+.checkout-btn {
+  background-color: rgb(22, 56, 115); 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.checkout-btn:hover {
+  background-color: rgb(38, 78, 155); 
+}
+
+.quantity-btn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: rgb(66, 78, 142);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background-color: rgb(115, 127, 198);
+}
